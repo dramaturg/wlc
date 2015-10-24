@@ -1,0 +1,14 @@
+Source: wlc
+Section: unknown
+Priority: optional
+Maintainer: Sebastian Krohn <seb@ds.ag>
+Build-Depends: debhelper, cmake (>= 3.1.0), build-essential, libwayland-dev (>= 1.9.0), libxcb-composite0-dev, libudev-dev, libinput-dev, libxcb-ewmh-dev, libxcb-ewmh2, libxcb-composite0-dev, libxcb-composite0, libxcb-xkb-dev, libxcb-xkb1, libxcb-image0, libxcb-image0-dev, libgles2-mesa, libgles2-mesa-dev, libgbm1, libgbm-dev, libsystemd-dev, libdbus-1-3, libdbus-1-dev, git, libdrm-dev (>= 2.4.64), libxcb-xkb-dev, libxkbcommon-dev, zlib1g-dev, libpixman-1-dev
+Standards-Version: 3.9.4
+Vcs-Git: https://github.com/dramaturg/wlc.git
+Vcs-browser: https://github.com/dramaturg/wlc
+Homepage: https://github.com/Cloudef/wlc
+
+Package: wlc
+Architecture: any
+Depends: libwayland-egl1-mesa, libxcb-composite0, xwayland, libudev1, libevdev2, libinput5, libxcb-ewmh2, libxcb-composite0, libxcb-xkb1, libxcb-image0, libgles2-mesa, libgbm1, libdbus-1-3, libdrm2 (>= 2.4.64), wayland (>= 1.9.0), libxcb-xkb1, ${shlibs:Depends}, ${misc:Depends}
+Description: Wayland compositor library
