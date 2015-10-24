@@ -1,12 +1,10 @@
 #!/usr/bin/make -f
 
-CMAKE-BUILD_TYPE=Upstream
-
 %:
 	dh $@ --buildsystem=cmake
 
 override_dh_auto_configure:
 	git submodule init
 	git submodule update lib/chck
-	dh_auto_configure -- -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_BUILD_TYPE=None \
-		-DCMAKE-BUILD_TYPE=Upstream -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib
+	dh_auto_configure -- -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE-BUILD_TYPE=Upstream \
+		-DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib
